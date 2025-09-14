@@ -1,0 +1,34 @@
+@model List<tryout.Dtos.CartItemDto>
+<h2>Your cart</h2>
+
+@if (Model == null || !Model.Any())
+{
+    <p>Your cart is empty.</p>
+}
+else
+{
+    <table>
+        <thead><tr><th>Product</th><th>Price</th><th>Qty</th><th>Subtotal</th><th></th></tr></thead>
+        <tbody>
+        @foreach (var it in Model)
+        {
+            <tr>
+                <td>@it.ProductName</td>
+                <td>@it.UnitPrice.ToString("C")</td>
+                <td>@it.Quantity</td>
+                <td>@(it.UnitPrice * it.Quantity).ToString("C")</td>
+                <td>
+                    <form asp-action="Remove" method="post">
+                        <input type="hidden" name="productId" value="@it.ProductId" />
+                        <button type="submit">Remove</button>
+                    </form>
+                </td>
+            </tr>
+        }
+        </tbody>
+    </table>
+
+    <form asp-action="Checkout" method="post">
+        <button type="submit">Checkout</button>
+    </form>
+}

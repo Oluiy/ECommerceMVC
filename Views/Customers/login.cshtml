@@ -1,0 +1,22 @@
+@model tryout.ViewModels.LoginViewModel
+@{
+    ViewData["Title"] = "Login";
+}
+<div style="width: 500px; display: flex; flex-direction: column; justify-self: center; align-self: center; padding: 20px; background-color: #d3d2ee; margin-top: 40px; z-index: 40; border-radius: 8px;">
+    
+
+<h2 style="text-align: center; margin-top: 100px; margin-bottom: 0;">Login</h2>
+<link rel="stylesheet" href="css/login.css"/>
+
+<form asp-action="Login" method="post" style="margin-top: -80px; display: flex; flex-direction: column; align-items: center; justify-items: center;">
+    <div style="margin-bottom: 2px; display: flex; flex-direction: column; gap: 19px; font-size: 30px; width: 400px; height: 400px; align-content: center; justify-content: center; ">
+        <div style="display: flex; flex-direction: column; gap: 8px;"><label asp-for="Email">Email</label><input asp-for="Email" style="height: 30px; width: 350px; border-radius: 7px; border: none;"/></div>
+        <div style="display: flex; flex-direction: column; gap: 8px;"><label asp-for="Password">Password</label><input asp-for="Password" type="password" style="height: 30px; width: 350px; border-radius: 7px; border-color: darkgray; background-color: lightgray;"/></div>
+        <button type="submit" style="width: 200px; height: 60px; padding-bottom: 10px; padding-top: 10px; border-radius: 8px; text-align: center; justify-self: center; align-self: center; font-size: 24px; font-family: 'American Typewriter, sans-serif'; background: darkblue; color: honeydew;">Login</button>
+    </div>
+    
+</form>
+</div>
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

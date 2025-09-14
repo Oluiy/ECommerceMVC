@@ -1,0 +1,12 @@
+@model IEnumerable<Product>
+@foreach(var p in Model) {
+    <div>
+        <h3>@p.Name (@p.Price)</h3>
+        <p>@p.Description</p>
+        <form asp-controller="Cart" asp-action="Add" method="post">
+            <input type="hidden" name="productId" value="@p.Id" />
+            <input name="qty" value="1" />
+            <button type="submit">Add to cart</button>
+        </form>
+    </div>
+}
