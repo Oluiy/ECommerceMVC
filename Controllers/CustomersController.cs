@@ -49,7 +49,9 @@ public class CustomersController : Controller
             PasswordSalt = salt,
             PhoneNumber = vm.PhoneNumber,
             DateOfBirth = vm.DateOfBirth.ToUniversalTime(),
-            IsActive = true
+            IsActive = true,
+            CreatedAt = DateTime.UtcNow,
+            UpdatedAt = DateTime.UtcNow
         };
 
         _db.Customers.Add(customer);

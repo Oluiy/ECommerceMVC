@@ -11,6 +11,8 @@ public class Customer
     public string PhoneNumber { get; set; } = "";
     public DateTime DateOfBirth { get; set; }
     public bool IsActive { get; set; } = true;
+    public DateTime CreatedAt { get; set; }
+    public DateTime UpdatedAt { get; set; } 
     public ICollection<Order>? Orders { get; set; }
     public ICollection<RefreshToken>? RefreshTokens { get; set; }
 }
