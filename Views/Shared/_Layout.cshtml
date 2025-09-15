@@ -18,7 +18,7 @@
                 <form method="post" asp-controller="Customers" asp-action="Logout" style="display:inline">
                     <button type="submit">Logout</button>
                 </form>
-                <span style="color: white;">Hello, @User.FindFirstValue(System.Security.Claims.ClaimTypes.Name) ?? @User.FindFirstValue("email")</span>
+                <pre style="color: white;">Hello, @User.FindFirstValue(ClaimTypes.Email).Replace("@gmail.com", " ").ToUpper()</pre>
             </text>
         }
         else
