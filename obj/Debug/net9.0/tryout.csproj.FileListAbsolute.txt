@@ -282,3 +282,4 @@
 /Users/israel/RiderProjects/tryout/obj/Debug/net9.0/compressed/xpqmff8zme-qsz4aot440.gz
 /Users/israel/RiderProjects/tryout/obj/Debug/net9.0/compressed/f09e6pgm9t-onatoptvoj.gz
 /Users/israel/RiderProjects/tryout/obj/Debug/net9.0/compressed/pwzgnzlhek-onatoptvoj.gz
+/Users/israel/RiderProjects/tryout/obj/Debug/net9.0/tryout.sourcelink.json
