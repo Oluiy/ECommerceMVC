@@ -1,21 +1,81 @@
+@* @model tryout.ViewModels.RegisterViewModel *@
+@* @{ *@
+@*     ViewData["Title"] = "Register"; *@
+@* } *@
+@* <div style="width: 500px; height: max-content; display: flex; flex-direction: column; justify-self: center; align-self: center; padding: 20px; background-color: whitesmoke; margin-top: 40px;z-index: 100; border-radius: 8px;"> *@
+@* <h2 style="text-align: center; margin-top: 100px; margin-bottom: 0;">Register</h2> *@
+@* $1$ position: fixed; top: 55%; left: 50%; transform: translate(-50%, -50%); z-index: 9999; #1# *@
+@* <form asp-action="Register" method="post" style="margin-top: -80px; display: flex; flex-direction: column; align-items: center; justify-items: center;"> *@
+@*     <div style="margin-bottom: 2px; display: flex; flex-direction: column; gap: 19px; font-size: 24px; width: 400px; height: 800px; align-content: center; justify-content: center; "> *@
+@*         <div style="display: flex; flex-direction: column; gap: 6px;"><label asp-for="FirstName">FirstName</label><input asp-for="FirstName" style="height: 36px; width: 400px; border-radius: 7px; border: none;"/></div> *@
+@*         <div style="display: flex; flex-direction: column; gap: 8px;"><label asp-for="LastName">LastName</label><input asp-for="LastName" style="height: 36px; width: 400px; border-radius: 7px; border: none;"/></div> *@
+@*         <div style="display: flex; flex-direction: column; gap: 8px;"><label asp-for="Email">Email</label><input asp-for="Email" style="height: 36px; width: 400px; border-radius: 7px; border: none;"/></div> *@
+@*         <div style="display: flex; flex-direction: column; gap: 8px;"><label asp-for="Password">Password</label><input asp-for="Password" type="password" style="height: 36px; width: 400px; border-radius: 7px; border: none;"/></div> *@
+@*         <div style="display: flex; flex-direction: column; gap: 8px;"><label asp-for="PhoneNumber">PhoneNumber</label><input asp-for="PhoneNumber" style="height: 36px; width: 400px; border-radius: 7px; border: none;"/></div> *@
+@*         <div style="display: flex; flex-direction: column; gap: 8px;"><label asp-for="DateOfBirth">DOB</label><input asp-for="DateOfBirth" type="date" style="height: 36px; width: 400px; border-radius: 7px; border: none;"/></div> *@
+@*     </div> *@
+@*     <button type="submit" asp-action="Register" style="width: 200px; height: 60px; margin-bottom: 90px; margin-top: 0; padding-bottom: 10px; padding-top: 10px; border-radius: 8px; text-align: center; justify-self: center; align-self: center; font-size: 24px; font-family: 'American Typewriter, sans-serif'; background: darkblue; color: honeydew;">Register</button> *@
+@* </form> *@
+@* </div> *@
+@* *@
+@* @section Scripts { *@
+@*     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");} *@
+@* } *@
+
 @model tryout.ViewModels.RegisterViewModel
 @{
     ViewData["Title"] = "Register";
 }
-<div style="width: 500px; height: max-content; display: flex; flex-direction: column; justify-self: center; align-self: center; padding: 20px; background-color: whitesmoke; margin-top: 40px;z-index: 100; border-radius: 8px;">
-<h2 style="text-align: center; margin-top: 100px; margin-bottom: 0;">Register</h2>
-@* position: fixed; top: 55%; left: 50%; transform: translate(-50%, -50%); z-index: 9999; *@
-<form asp-action="Register" method="post" style="margin-top: -80px; display: flex; flex-direction: column; align-items: center; justify-items: center;">
-    <div style="margin-bottom: 2px; display: flex; flex-direction: column; gap: 19px; font-size: 24px; width: 400px; height: 800px; align-content: center; justify-content: center; ">
-        <div style="display: flex; flex-direction: column; gap: 6px;"><label asp-for="FirstName">FirstName</label><input asp-for="FirstName" style="height: 36px; width: 400px; border-radius: 7px; border: none;"/></div>
-        <div style="display: flex; flex-direction: column; gap: 8px;"><label asp-for="LastName">LastName</label><input asp-for="LastName" style="height: 36px; width: 400px; border-radius: 7px; border: none;"/></div>
-        <div style="display: flex; flex-direction: column; gap: 8px;"><label asp-for="Email">Email</label><input asp-for="Email" style="height: 36px; width: 400px; border-radius: 7px; border: none;"/></div>
-        <div style="display: flex; flex-direction: column; gap: 8px;"><label asp-for="Password">Password</label><input asp-for="Password" type="password" style="height: 36px; width: 400px; border-radius: 7px; border: none;"/></div>
-        <div style="display: flex; flex-direction: column; gap: 8px;"><label asp-for="PhoneNumber">PhoneNumber</label><input asp-for="PhoneNumber" style="height: 36px; width: 400px; border-radius: 7px; border: none;"/></div>
-        <div style="display: flex; flex-direction: column; gap: 8px;"><label asp-for="DateOfBirth">DOB</label><input asp-for="DateOfBirth" type="date" style="height: 36px; width: 400px; border-radius: 7px; border: none;"/></div>
-    </div>
-    <button type="submit" asp-action="Register" style="width: 200px; height: 60px; margin-bottom: 90px; margin-top: 0; padding-bottom: 10px; padding-top: 10px; border-radius: 8px; text-align: center; justify-self: center; align-self: center; font-size: 24px; font-family: 'American Typewriter, sans-serif'; background: darkblue; color: honeydew;">Register</button>
-</form>
+
+<div style="max-width: 500px; margin: 60px auto; padding: 30px; background: #ffffff; border-radius: 12px; box-shadow: 0px 6px 18px rgba(0,0,0,0.1); font-family: 'Segoe UI', Roboto, sans-serif;">
+    <h2 style="text-align: center; margin-bottom: 25px; font-size: 28px; font-weight: bold; color: #2c3e50;">
+        Create an Account
+    </h2>
+
+    <form asp-action="Register" method="post" style="display: flex; flex-direction: column; gap: 18px;">
+        <div style="display: flex; flex-direction: column;">
+            <label asp-for="FirstName" style="font-weight: 600; margin-bottom: 6px; color: #34495e;"></label>
+            <input asp-for="FirstName" placeholder="Enter your first name"
+                   style="height: 42px; padding: 10px; border: 1px solid #dcdde1; border-radius: 8px; font-size: 16px;" />
+        </div>
+
+        <div style="display: flex; flex-direction: column;">
+            <label asp-for="LastName" style="font-weight: 600; margin-bottom: 6px; color: #34495e;"></label>
+            <input asp-for="LastName" placeholder="Enter your last name"
+                   style="height: 42px; padding: 10px; border: 1px solid #dcdde1; border-radius: 8px; font-size: 16px;" />
+        </div>
+
+        <div style="display: flex; flex-direction: column;">
+            <label asp-for="Email" style="font-weight: 600; margin-bottom: 6px; color: #34495e;"></label>
+            <input asp-for="Email" placeholder="Enter your email"
+                   style="height: 42px; padding: 10px; border: 1px solid #dcdde1; border-radius: 8px; font-size: 16px;" />
+        </div>
+
+        <div style="display: flex; flex-direction: column;">
+            <label asp-for="Password" style="font-weight: 600; margin-bottom: 6px; color: #34495e;"></label>
+            <input asp-for="Password" type="password" placeholder="Enter your password"
+                   style="height: 42px; padding: 10px; border: 1px solid #dcdde1; border-radius: 8px; font-size: 16px;" />
+        </div>
+
+        <div style="display: flex; flex-direction: column;">
+            <label asp-for="PhoneNumber" style="font-weight: 600; margin-bottom: 6px; color: #34495e;"></label>
+            <input asp-for="PhoneNumber" placeholder="Enter your phone number"
+                   style="height: 42px; padding: 10px; border: 1px solid #dcdde1; border-radius: 8px; font-size: 16px;" />
+        </div>
+
+        <div style="display: flex; flex-direction: column;">
+            <label asp-for="DateOfBirth" style="font-weight: 600; margin-bottom: 6px; color: #34495e;">Date of Birth</label>
+            <input asp-for="DateOfBirth" type="date"
+                   style="height: 42px; padding: 10px; border: 1px solid #dcdde1; border-radius: 8px; font-size: 16px;" />
+        </div>
+
+        <button type="submit" asp-action="Register"
+                style="margin-top: 10px; padding: 14px; font-size: 18px; font-weight: 600; border: none; border-radius: 8px;
+                       background: linear-gradient(135deg, #1e3c72, #2a5298); color: #fff; cursor: pointer;
+                       transition: background 0.3s ease-in-out, transform 0.1s;">
+            Register
+        </button>
+    </form>
 </div>
 
 @section Scripts {

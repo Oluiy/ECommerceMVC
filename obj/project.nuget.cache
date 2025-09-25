@@ -67,5 +67,15 @@
     "/Users/israel/.nuget/packages/xunit.extensibility.core/2.9.3/xunit.extensibility.core.2.9.3.nupkg.sha512",
     "/Users/israel/.nuget/packages/xunit.extensibility.execution/2.9.3/xunit.extensibility.execution.2.9.3.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1900",
+      "level": "Warning",
+      "message": "Error occurred while getting package vulnerability data: Unable to load the service index for source https://api.nuget.org/v3/index.json.",
+      "projectPath": "/Users/israel/RiderProjects/tryout/tryout.csproj",
+      "warningLevel": 1,
+      "filePath": "/Users/israel/RiderProjects/tryout/tryout.csproj",
+      "targetGraphs": []
+    }
+  ]
 }
